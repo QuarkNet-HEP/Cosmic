@@ -3,5 +3,8 @@
 */.ipynb_checkpoints/*
 
 ### Emacs? ###
-#*#
+\#*#
 *~
+
+### Common Script Outputs
+*.wd
