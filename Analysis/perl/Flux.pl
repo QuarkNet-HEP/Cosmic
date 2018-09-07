@@ -96,8 +96,9 @@ while(<IN>){
 	$firstJd=$row[1] unless defined($firstJd);
     $numBinsToUseInOneDay=(1 + int(1.0/$binwidth)) unless defined ($numBinsToUseInOneDay); 
 	$dayWBinOffset=($numBinsToUseInOneDay*$binwidth) unless defined($dayWBinOffset);
-	@range=($firstRe+$dayNumber*$dayWBinOffset,$firstRe+(1+$dayNumber)*$dayWBinOffset) unless defined(@range);
-    
+	# `defined(@array) deprecated in Perl 5.10: fix with defined(@range) > (@range) - JG 6Sept2018
+	@range=($firstRe+$dayNumber*$dayWBinOffset,$firstRe+(1+$dayNumber)*$dayWBinOffset) unless (@range);
+
 	if(($row[1]-$firstJd+$row[2])<=$range[1] && ($row[1]-$firstJd+$row[2])>=$range[0]) {
 		push @data,( $row[2]+($row[1]-$firstJd)) if($row[2]);    #only add RE times if they are defined in the file (in 3rd column
 	} elsif(($row[1]-$firstJd+$row[2]) > $range[1]){    #time to do a new day's analysis
