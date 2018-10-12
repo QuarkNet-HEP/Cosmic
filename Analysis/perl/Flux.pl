@@ -130,6 +130,7 @@ die "Error: no data found in column $ARGV[2] in file: $infile\n" if($#data < 0);
 &freq_analyze(1);
 die "Error: no Flux found, try getting a file with more data, or lessen the bin widths\n" if($fluxFound <=1);
 
+
 # Setup the bins, and analyze what's in the @data array. Print results to file.
 # The only argument tells the function if this is the end of the data file, if so
 # # the last binwidth should be thrown out because it will most likely not be full.
