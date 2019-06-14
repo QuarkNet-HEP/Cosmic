@@ -1,2 +1,2 @@
-# cosmic-ray-notebooks
-Cosmic ray analysis files intended for use with Jupyter and Binder
+# Cosmic Exploration Books
+Jupyter Notebooks designed to teach physics, scientific methods, and introductory programming and data skills using QuarkNet's cosmic ray muon data.
